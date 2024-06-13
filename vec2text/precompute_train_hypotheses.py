@@ -8,7 +8,7 @@ import tqdm
 
 
 def precompute(start_idx: int, num_samples: int):
-    out_path = f"/home/jxm3/research/retrieval/inversion/msmarco_msl128_hypotheses/msmarco_{num_samples}_{start_idx}.arrow"
+    out_path = f"/home/XXXX3/research/retrieval/inversion/msmarco_msl128_hypotheses/msmarco_{num_samples}_{start_idx}.arrow"
     if os.path.exists(out_path):
         print("already precomputed; exiting")
     # load the previously-trained msmarco model
@@ -33,10 +33,10 @@ def gather():
     n_samples = 136772  # gather all files that have this many samples
     files = sorted(
         glob.glob(
-            f"/home/jxm3/research/retrieval/inversion/msmarco_msl128_hypotheses/msmarco_{n_samples}_*"
+            f"/home/XXXX3/research/retrieval/inversion/msmarco_msl128_hypotheses/msmarco_{n_samples}_*"
         )
     )
-    gathered_dataset_path = "/home/jxm3/research/retrieval/inversion/msmarco_msl128_hypotheses/msmarco_full.cache"
+    gathered_dataset_path = "/home/XXXX3/research/retrieval/inversion/msmarco_msl128_hypotheses/msmarco_full.cache"
     datasets_list = []
     print(f"found {len(files)} files to concatenate.")
     print(f"\t first three: {files[:3]}")

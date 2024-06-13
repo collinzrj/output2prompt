@@ -97,7 +97,7 @@ def load_experiment_and_trainer(
     print("> checkpoint:", checkpoint)
     if (
         checkpoint
-        == "/home/jxm3/research/retrieval/inversion/saves/47d9c149a8e827d0609abbeefdfd89ac/checkpoint-558000"
+        == "/home/XXXX3/research/retrieval/inversion/saves/47d9c149a8e827d0609abbeefdfd89ac/checkpoint-558000"
     ):
         # Special handling for one case of backwards compatibility:
         #   set dataset (which used to be empty) to nq

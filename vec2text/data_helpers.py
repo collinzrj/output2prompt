@@ -18,7 +18,7 @@ def retain_dataset_columns(
 
 
 def load_nq_dpr_corpus() -> datasets.Dataset:
-    return datasets.load_dataset("jxm/nq_corpus_dpr")
+    return datasets.load_dataset("XXXX/nq_corpus_dpr")
 
 
 def load_msmarco_corpus() -> datasets.Dataset:
@@ -105,7 +105,7 @@ def dataset_from_args(data_args: DataArguments) -> datasets.DatasetDict:
         raw_datasets = raw_datasets.train_test_split(test_size=0.01)
         raw_datasets["validation"] = raw_datasets["test"]
     elif data_args.dataset_name == "entity_prompts":
-        dataset_dict = datasets.load_dataset("jxm/private_prompts")
+        dataset_dict = datasets.load_dataset("XXXX/private_prompts")
         dataset_dict = dataset_map_multi_worker(dataset_dict, create_ompi_ex)
         raw_datasets = dataset_dict["train"]
         raw_datasets = raw_datasets.train_test_split(test_size=0.01)
@@ -156,7 +156,7 @@ def load_beir_corpus(name: str) -> List[str]:
     from beir.datasets.data_loader import GenericDataLoader
 
     #### Download scifact.zip dataset and unzip the dataset
-    beir_datasets_cache_dir = "/home/jxm3/research/retrieval/distractor_exp"
+    beir_datasets_cache_dir = "/home/XXXX3/research/retrieval/distractor_exp"
 
     url = "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/{}.zip".format(
         name
@@ -200,7 +200,7 @@ def load_beir_corpus(name: str) -> List[str]:
 def load_beir_dataset(name: str) -> datasets.Dataset:
     cache_path = (
         datasets.config.HF_DATASETS_CACHE
-    )  # something like /home/jxm3/.cache/huggingface/datasets
+    )  # something like /home/XXXX3/.cache/huggingface/datasets
     dataset_path = os.path.join(cache_path, "emb_inv_beir", name)
     print(f"loading BEIR dataset: {name}")
     if os.path.exists(dataset_path):

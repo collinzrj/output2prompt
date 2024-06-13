@@ -169,7 +169,7 @@ def get_manifest_global():
         manifest_object = Manifest(
             client_name="openaiembedding",  # defaults to 'text-embedding-ada-002'
             # cache_name="sqlite",
-            # cache_connection="/home/jxm3/.manifest/jxm_openai_manifest.sqlite",
+            # cache_connection="/home/XXXX3/.manifest/XXXX_openai_manifest.sqlite",
         )
         # manifest_object.PARAMS = {
         #     'engine': ('model', 'text-embedding-ada-002'),
@@ -351,7 +351,7 @@ class EntityMaskCollator(DataCollatorForLanguageModeling):
     def __init__(self):
         self.roberta_tokenizer = AutoTokenizer.from_pretrained('roberta-base')
         prompt_value_dict = {}
-        original_dataset = datasets.load_dataset('jxm/private_prompts')
+        original_dataset = datasets.load_dataset('XXXX/private_prompts')
         if os.path.exists('prompt_value_dict.pkl'):
             with open('prompt_value_dict.pkl', 'rb') as f:
                 prompt_value_dict = pickle.load(f)
@@ -399,7 +399,7 @@ class T5EntityMaskCollator(DataCollatorForLanguageModeling):
     def __init__(self):
         self.t5_tokenizer = AutoTokenizer.from_pretrained('t5-base')
         prompt_value_dict = {}
-        original_dataset = datasets.load_dataset('jxm/private_prompts')
+        original_dataset = datasets.load_dataset('XXXX/private_prompts')
         if os.path.exists('prompt_value_dict.pkl'):
             with open('prompt_value_dict.pkl', 'rb') as f:
                 prompt_value_dict = pickle.load(f)
@@ -438,7 +438,7 @@ class DatasetFilter(Dataset):
             with open('prompt_value_dict.pkl', 'rb') as f:
                 prompt_value_dict = pickle.load(f)
         else:
-            original_dataset = datasets.load_dataset('jxm/private_prompts')
+            original_dataset = datasets.load_dataset('XXXX/private_prompts')
             for idx, data in tqdm.tqdm(enumerate(original_dataset['train'])):
                 prompt_value_dict[data['prompt']] = (data['value'], data['field'], data['source'])
             with open('prompt_value_dict.pkl', 'wb') as f:

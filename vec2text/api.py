@@ -21,10 +21,10 @@ def load_corrector(embedder: str) -> vec2text.trainers.Corrector:
     ), f"embedder to invert `{embedder} not in list of supported models: {SUPPORTED_MODELS}`"
 
     inversion_model = vec2text.models.InversionModel.from_pretrained(
-        "jxm/vec2text__openai_ada002__msmarco__msl128__hypothesizer"
+        "XXXX/vec2text__openai_ada002__msmarco__msl128__hypothesizer"
     )
     model = vec2text.models.CorrectorEncoderModel.from_pretrained(
-        "jxm/vec2text__openai_ada002__msmarco__msl128__corrector"
+        "XXXX/vec2text__openai_ada002__msmarco__msl128__corrector"
     )
 
     inversion_trainer = vec2text.trainers.InversionTrainer(
