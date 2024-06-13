@@ -1,7 +1,5 @@
 # Extracting Prompts by Inverting LLM Outputs
 
-This repository is the official implementation of [Extracting Prompts by Inverting LLM Outputs](https://arxiv.org/abs/2405.15012).
-
 ## Requirements
 
 To install requirements:
