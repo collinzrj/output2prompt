@@ -12,3 +12,4 @@ sentence_transformers
 tenacity
 tokenizers
 tqdm
+transformers==4.36.0
