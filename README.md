@@ -13,6 +13,9 @@ unzip prompt2output_datasets.zip
 pip install .
 ```
 
+## Troubleshooting
+If you encountered problems while running the code, please make sure your `transformers` library version is 4.36.0, if it is too new, there will be problem 
+
 ## Training
 
 To train the model(s) in the paper, run this command:
