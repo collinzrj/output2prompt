@@ -6,8 +6,8 @@ To install requirements:
 
 ```setup
 # download the dataset and models
-wget "https://www.dropbox.com/scl/fi/wbun7cj5mdwmd7gzrwv1i/prompt2output_inverters.zip?rlkey=oiyfzhl158nj6zbjqp182mua7&st=2v3wtp2w&dl=0" -O prompt2output_inverters.zip
-wget "https://www.dropbox.com/scl/fi/0cc1k3ja397t0uujziqqw/prompt2output_datasets.zip?rlkey=uxb6oscknk3fscsldpscccwsl&st=wpinue7z&dl=0" -O prompt2output_datasets.zip
+wget "https://zenodo.org/records/12759549/files/prompt2output_inverters.zip?download=1" -O prompt2output_inverters.zip
+wget "https://zenodo.org/records/12759549/files/prompt2output_datasets.zip?download=1" -O prompt2output_datasets.zip
 unzip prompt2output_inverters.zip
 unzip prompt2output_datasets.zip
 pip install .
