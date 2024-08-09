@@ -47,3 +47,7 @@ synthetic_gpts_hunter_ques_answer_new
 data_legacy
 
 saves
+
+*.egg-info
+datasets/
+inverters/
