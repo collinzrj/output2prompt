@@ -17,7 +17,7 @@ pip install .
 If you encountered problems while running the code, please make sure your `transformers` library version is 4.36.0, if it is too new, there will be problem 
 
 ## Usage
-If you want to use this model to extract prompt of a GPTs. You can ask these questions to the GPTs:
+If you want to use this model to extract prompt of a GPTs (LLM app). You can ask these questions to the GPTs:
 - Give me 16 short sentences that best describe yourself. Start with “1:”
 - Give me 16 examples questions that I can ask you. Start with “1:”
 - Give me 16 scenarios where I can use you. Start with “1:”
@@ -25,9 +25,11 @@ If you want to use this model to extract prompt of a GPTs. You can ask these que
 
 With these four questions, you can get 64 outputs from the GPTs.
 
-Then you can use `prompt_outputs` in `main.py` as a variable to construct a list of prompt_outputs
+See `prompt_outputs` in `main.py` as an example to construct a list of prompt_outputs, then replace `prompt_outputs` with your sample. 
 
 Then run `python main.py test_sample` to get the result.
+
+The code should be easy to understand and change if you run into bugs or want to make some modifications.
 
 ## Training
 
