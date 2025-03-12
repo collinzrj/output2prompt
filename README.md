@@ -1,5 +1,7 @@
 # Extracting Prompts by Inverting LLM Outputs
 
+Link to paper: https://arxiv.org/abs/2405.15012
+
 ## Requirements
 
 To install requirements:
